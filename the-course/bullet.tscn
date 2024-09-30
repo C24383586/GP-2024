@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://bnqmephymomns"]
+
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_lx042"]
+[ext_resource type="Texture2D" uid="uid://bh82kk057dc4p" path="res://assets/PNG/Sprites/Missiles/spaceMissiles_021.png" id="2_nt32q"]
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+script = ExtResource("1_lx042")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_nt32q")

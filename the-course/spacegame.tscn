@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://capughigq4ls3"]
+
+[ext_resource type="PackedScene" uid="uid://bfivxwqtiyw36" path="res://player.tscn" id="1_cuaqq"]
+
+[node name="Root" type="Node2D"]
+
+[node name="Player" parent="." instance=ExtResource("1_cuaqq")]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2(7, 479)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
