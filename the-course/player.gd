@@ -1,4 +1,4 @@
-#extends CharacterBody2D
+extends CharacterBody2D
 
 @export var bullet_scene:PackedScene
 @export var bullet_spawn_point:Node2D
