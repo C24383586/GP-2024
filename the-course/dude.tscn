@@ -49,4 +49,5 @@ stream = ExtResource("3_62y41")
 pitch_scale = 1.37252
 autoplay = true
 
+[connection signal="area_entered" from="Spaceship" to="." method="_on_spaceship_area_entered"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
