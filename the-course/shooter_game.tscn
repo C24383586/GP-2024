@@ -1,18 +1,22 @@
-[gd_scene load_steps=6 format=3 uid="uid://5xmg4kyjea30"]
+[gd_scene load_steps=7 format=3 uid="uid://5xmg4kyjea30"]
 
 [ext_resource type="Script" uid="uid://byl3sew3vbcr5" path="res://shooter_game.gd" id="1_c5ar1"]
 [ext_resource type="PackedScene" uid="uid://dogoya3fntpbk" path="res://dude.tscn" id="2_gm47b"]
 [ext_resource type="PackedScene" uid="uid://7ffshnxf3qah" path="res://ufo.tscn" id="3_6xsbg"]
 [ext_resource type="PackedScene" uid="uid://nb8daasaeu3i" path="res://explosion.tscn" id="3_c5ar1"]
+[ext_resource type="PackedScene" uid="uid://cdwd76usx35es" path="res://ammo_box.tscn" id="4_ejtda"]
 [ext_resource type="Script" uid="uid://ck2i25kw3ks1m" path="res://ufo_spawner.gd" id="4_gm47b"]
 
 [node name="shooter_game" type="Node2D"]
 script = ExtResource("1_c5ar1")
 
 [node name="dude" parent="." instance=ExtResource("2_gm47b")]
+rotation = 4.41315
 color = Color(0, 1, 0.25, 0.847059)
 speed = 500.0
 explosion = ExtResource("3_c5ar1")
+
+[node name="Ammo Box" parent="." instance=ExtResource("4_ejtda")]
 
 [node name="ufo_spawner" type="Marker2D" parent="."]
 script = ExtResource("4_gm47b")
@@ -53,3 +57,5 @@ offset_top = 419.0
 offset_right = 344.0
 offset_bottom = 494.0
 text = "ufo_COUNT: 0"
+
+[connection signal="area_entered" from="Ammo Box" to="." method="_on_ammo_box_area_entered"]

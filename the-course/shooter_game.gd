@@ -29,3 +29,8 @@ func _process(delta):
 	$CanvasLayer/target.text="target_count: " + str(target)
 	$CanvasLayer/level.text="level: " + str(level)
 	pass
+
+
+func _on_ammo_box_area_entered(area: Area2D) -> void:
+	var ammo =+ 100
+	pass # Replace with function body.
