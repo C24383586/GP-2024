@@ -11,12 +11,13 @@
 script = ExtResource("1_c5ar1")
 
 [node name="dude" parent="." instance=ExtResource("2_gm47b")]
-rotation = 4.41315
+rotation = 5.58103
 color = Color(0, 1, 0.25, 0.847059)
 speed = 500.0
 explosion = ExtResource("3_c5ar1")
 
 [node name="Ammo Box" parent="." instance=ExtResource("4_ejtda")]
+position = Vector2(-259, -89)
 
 [node name="ufo_spawner" type="Marker2D" parent="."]
 script = ExtResource("4_gm47b")

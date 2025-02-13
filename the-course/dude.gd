@@ -33,6 +33,8 @@ extends CharacterBody2D
 # If crash create explosion
 @export var explosion:PackedScene
 
+@onready var spaceship = $Spaceship
+
 # The timer will reset this later 
 var can_fire = true
 
@@ -131,4 +133,13 @@ func _ready() -> void:
 func _on_timer_timeout() -> void:
 	# allow the player to fire again
 	can_fire = true
+	pass # Replace with function body.
+	
+func _on_ammo_box_area_entered(area: Area2D) -> void:
+	if spaceship:
+		var ammo =+ 100
+	pass # Replace with function body.
+
+
+func _on_spaceship_area_entered(area: Area2D) -> void:
 	pass # Replace with function body.
