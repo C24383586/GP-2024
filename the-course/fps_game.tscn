@@ -45,5 +45,7 @@ script = ExtResource("1_cykxj")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="fps_player"]
 shape = SubResource("BoxShape3D_1r5kd")
 
+[node name="Camera3D" type="Camera3D" parent="fps_player"]
+
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 mesh = SubResource("BoxMesh_7s0cy")
