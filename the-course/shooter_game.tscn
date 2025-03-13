@@ -11,7 +11,8 @@
 script = ExtResource("1_c5ar1")
 
 [node name="dude" parent="." instance=ExtResource("2_gm47b")]
-rotation = 5.46127
+rotation = 0.595689
+scale = Vector2(1e-05, 1e-05)
 color = Color(0, 1, 0.25, 0.847059)
 speed = 500.0
 explosion = ExtResource("3_c5ar1")

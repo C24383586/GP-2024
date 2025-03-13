@@ -1,0 +1,49 @@
+[gd_scene load_steps=10 format=3 uid="uid://kswoxv27jog8"]
+
+[ext_resource type="Script" uid="uid://b8p7hpwa5i2at" path="res://fps_player.gd" id="1_cykxj"]
+
+[sub_resource type="Environment" id="Environment_o6d5r"]
+
+[sub_resource type="CameraAttributesPractical" id="CameraAttributesPractical_jkgwa"]
+
+[sub_resource type="Compositor" id="Compositor_uiy6f"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_tvcn8"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_q41vd"]
+
+[sub_resource type="WorldBoundaryShape3D" id="WorldBoundaryShape3D_cykxj"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1r5kd"]
+
+[sub_resource type="BoxMesh" id="BoxMesh_7s0cy"]
+
+[node name="fps_game" type="Node3D"]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_o6d5r")
+camera_attributes = SubResource("CameraAttributesPractical_jkgwa")
+compositor = SubResource("Compositor_uiy6f")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.284834, 1.22393, 1.50639)
+light_energy = 1.44
+
+[node name="StaticBody3D" type="StaticBody3D" parent="."]
+physics_material_override = SubResource("PhysicsMaterial_tvcn8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="StaticBody3D"]
+mesh = SubResource("PlaneMesh_q41vd")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D"]
+shape = SubResource("WorldBoundaryShape3D_cykxj")
+
+[node name="fps_player" type="CharacterBody3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 2.20184)
+script = ExtResource("1_cykxj")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="fps_player"]
+shape = SubResource("BoxShape3D_1r5kd")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+mesh = SubResource("BoxMesh_7s0cy")
